@@ -19,6 +19,7 @@ const InputLable = (props) => {
                         type="text" 
                         className="roundInput"
                         onChange={props.onchange}
+                        
                     />
                 </Form.Group>
             

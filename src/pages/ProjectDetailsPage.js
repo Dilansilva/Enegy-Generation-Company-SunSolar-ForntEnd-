@@ -1,7 +1,8 @@
 import React,{useState} from 'react';
 
 import { Form,  //Import some tags from bootstrap
-        Button} from 'react-bootstrap';
+        Button,
+        Row} from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';//bootstrap
 
 import NavBar from '../components/NavBar';//import Navigation bar
@@ -10,6 +11,20 @@ import InputLable from '../components/InputLable'//import Input lables
 import '../css/projectdetails.css'//import some css
 
 const ProjectDetailsPage = () => {
+
+   const [projectCode,setProjectCode] = useState('dfgfd');//state for project code
+   const [customerCode,setCustomerCode] = useState('gdfgd');//state for customer code
+
+   const [data,setData] = useState({
+       capacity : '',
+       location : '',
+       vist : '',
+       date : '',
+       connType : '',
+       gridType : '',
+       base : ''
+   });
+
     return (
         <>
             <NavBar/>
@@ -22,11 +37,34 @@ const ProjectDetailsPage = () => {
                 <div style={{display: 'flex',  
                     justifyContent:'center', 
                     alignItems:'center', 
-                    height: '70vh',
+                    height: '90vh',
                     backgroundColor: '#f8f1f1'}}>
 
                     
                     <Form>
+                        <Form.Group as={Row} controlId="formHorizontalEmail">
+                            <span className="dot"></span>
+                            <Form.Label>Project Code : </Form.Label>
+
+                            <Form.Control 
+                                placeholder={projectCode} //prop for placholder
+                                type="text" 
+                                className="roundInput"
+                                disabled
+                            />
+                        </Form.Group>
+
+                        <Form.Group as={Row} controlId="formHorizontalEmail">
+                            <span className="dot"></span>
+                            <Form.Label>Customer Code : </Form.Label>
+
+                            <Form.Control 
+                                placeholder={customerCode} //prop for placholder
+                                type="text" 
+                                className="roundInput"
+                                disabled
+                            />
+                        </Form.Group>
                         
                         <InputLable
                             Lable="Enter Capacity Here : "
