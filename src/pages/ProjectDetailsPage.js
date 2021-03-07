@@ -94,37 +94,43 @@ const ProjectDetailsPage = () => {
                         <InputLable
                             Lable="Enter Capacity Here : "
                             placeholder="Capacity(Kw)"
-                            onchange={}
+                            onchange={(e) => {setCapacity(e.target.value)}}
                         />
 
                         <InputLable
                             Lable="Geo Location : "
                             placeholder="Geo location here"
+                            onchange={(e) => {setLocation(e.target.value)}}
                         />
 
                         <InputLable
                             Lable="Site Visit by : "
                             placeholder="Site visit by"
+                            onchange={(e) => {setVisit(e.target.value)}}
                         />
 
                         <InputLable
                             Lable="Visited date : "
                             placeholder="Date"
+                            onchange={(e) => {setDate(e.target.value)}}
                         />
 
                         <InputLable
                             Lable="Solar Conection Type : "
                             placeholder="Net_Metering/Net_Accouting/Net_Plus"
+                            onchange={(e) => {setConntype(e.target.value)}}
                         />
 
                         <InputLable
                             Lable="Grid type : "
                             placeholder="LECO/CEB"
+                            onchange={(e) => {setGridtype(e.target.value)}}
                         />
 
                         <InputLable
                             Lable="Payment Base : "
                             placeholder="Cash/ADB Loan/Normal Loan"
+                            onchange={(e) => {setBase(e.target.value)}}
                         />
 
                         <Button
