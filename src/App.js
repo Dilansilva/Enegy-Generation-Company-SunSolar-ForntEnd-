@@ -5,7 +5,7 @@ import CustomerDetailsPage from './pages/CustomerDetailsPage';//import customer 
 function App() {
   return (
     <div>
-      <CustomerDetailsPage/>
+      <LoginPage/>
     </div>
   );
 }

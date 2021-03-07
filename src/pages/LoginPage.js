@@ -12,9 +12,25 @@ const LoginPage = () => {
     const [password,setPassword] = useState('');//state for password 
 
     const onSubmitHandler = (e) => {//submit function when button clicked
-
         e.preventDefault();//block the getting refresh when button clicked
-        
+        fetch('http://localhost:3000/login',{
+            method : 'POST',
+            mode : 'cors',
+            headers: {
+                Accept : 'application/json',
+                'Content-Type' : 'application/json',
+                'Access-Control-Allow-Origin' : 'http://localhost:3000/login'
+            },
+            body : JSON.stringify({
+                email ,
+                password
+            })
+        }).then((response) => {
+            console.log(response);
+        })
+        .then((responseJson) => {
+                console.log(responseJson);
+        })
     }
 
     return(
