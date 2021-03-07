@@ -15,15 +15,18 @@ const ProjectDetailsPage = () => {
    const [projectCode,setProjectCode] = useState('dfgfd');//state for project code
    const [customerCode,setCustomerCode] = useState('gdfgd');//state for customer code
 
-   const [data,setData] = useState({
-       capacity : '',
-       location : '',
-       vist : '',
-       date : '',
-       connType : '',
-       gridType : '',
-       base : ''
-   });
+   const [capacity,setCapacity] = useState('');//state for capacity
+   const [location,setLocation] = useState('');//state for location
+   const [visit,setVisit] = useState('');//state for vist
+   const [date,setDate] = useState('');//state for date
+   const [connType,setConntype] = useState('');//state for connection type
+   const [gridType,setGridtype] = useState('');//state forgrid type
+   const [base,setBase] = useState('');//state for base
+
+   const onSubmitHandler = (e) => {
+        e.preventDefault();
+        
+   }
 
     return (
         <>
@@ -69,6 +72,7 @@ const ProjectDetailsPage = () => {
                         <InputLable
                             Lable="Enter Capacity Here : "
                             placeholder="Capacity(Kw)"
+                            onchange={}
                         />
 
                         <InputLable
