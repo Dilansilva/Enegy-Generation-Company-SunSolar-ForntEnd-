@@ -25,7 +25,29 @@ const ProjectDetailsPage = () => {
 
    const onSubmitHandler = (e) => {
         e.preventDefault();
-        
+        fetch('http://localhost:3000/projects',{
+            method : 'POST',
+            mode : 'cors',
+            headers: {
+                Accept : 'application/json',
+                'Content-Type' : 'application/json',
+                'Access-Control-Allow-Origin' : 'http://localhost:3000/projects'
+            },
+            body : JSON.stringify({
+                capacity,
+                location,
+                visit,
+                date,
+                connType,
+                gridType,
+                base
+            })
+        }).then((response) => {
+            console.log(response);
+        })
+        .then((responseJson) => {
+                console.log(responseJson);
+        })
    }
 
     return (
