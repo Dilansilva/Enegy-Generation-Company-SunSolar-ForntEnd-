@@ -136,6 +136,7 @@ const ProjectDetailsPage = () => {
                         <Button
                             className="roundInput" 
                             variant="warning"
+                            onClick={onSubmitHandler}
                         block>
                             Submit
                         </Button>
